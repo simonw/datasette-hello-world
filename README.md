@@ -15,7 +15,9 @@ Install this plugin in the same environment as Datasette.
 
 ## Usage
 
-Usage instructions go here.
+Run this to see "Hello world":
+
+    datasette hello-world
 
 ## Development
 

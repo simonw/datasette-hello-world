@@ -1,11 +1,10 @@
-from datasette.app import Datasette
-import pytest
+from datasette.cli import cli
+from click.testing import CliRunner
+import sqlite3
 
 
-@pytest.mark.asyncio
-async def test_plugin_is_installed():
-    datasette = Datasette([], memory=True)
-    response = await datasette.client.get("/-/plugins.json")
-    assert response.status_code == 200
-    installed_plugins = {p["name"] for p in response.json()}
-    assert "datasette-hello-world" in installed_plugins
+def test_verify():
+    runner = CliRunner()
+    result = runner.invoke(cli, ["hello-world"])
+    assert result.exit_code == 0
+    assert result.output.strip() == "Hello world"
