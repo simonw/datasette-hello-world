@@ -1,3 +1,5 @@
+<img src="https://datasette.io/static/datasette-logo.svg" alt="Datasette">
+
 # datasette-hello-world
 
 [![PyPI](https://img.shields.io/pypi/v/datasette-hello-world.svg)](https://pypi.org/project/datasette-hello-world/)
